@@ -1,0 +1,9 @@
+body,html,#root,.App{
+    margin: 0 auto;
+    height: 100%;
+}
+
+.series {
+    display:flex;
+    justify-content: space-between;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // eslint-disable-next-line
 import Loader from '../../components/Loader';
-
+import "./index.css";
 class SingleSeries extends Component {
     state = {
         show: null
@@ -24,6 +24,7 @@ class SingleSeries extends Component {
                 {
                     show!== null
                     &&
+             
                 <div>
                     <p>{show.name}</p>
                     <p>Premiered - {show.premiered}</p>

@@ -7,7 +7,6 @@ const SeriesListItem = ({ series }) => (
         <Link to={`/series/${series.show.id}`} >
         {series.show.name}
         </Link>
-        
     </li>
 )
 const SeriesList = (props) => {

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Intro from '../../components/Intro';
 import SeriesList from '../../components/SeriesList';
 import Loader from '../../components/Loader';
+import "./index.css";
 
 class Series extends Component {
     state = {
@@ -30,12 +31,12 @@ class Series extends Component {
                   onChange={this.onSeriesInputChange} />
               </div>
               { 
-                isFetching && series.length === 0 && seriesName.trim() === ''
+                !isFetching && series.length === 0 && seriesName.trim() === ''
                 &&
                 <p>Please enter series name into the input</p>
               }
               {
-                isFetching && series.length === 0 && seriesName.trim() !==''
+                !isFetching && series.length === 0 && seriesName.trim() !==''
                 &&
                 <p>No TV series have been found with this name</p>
               }
@@ -43,7 +44,7 @@ class Series extends Component {
                 isFetching && <Loader />
               }
               {
-                isFetching && <SeriesList list={this.state.series} />
+                !isFetching && <SeriesList list={this.state.series} />
               }
             
             </div>
